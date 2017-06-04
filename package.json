@@ -1,26 +1,83 @@
 {
-  "name": "crys",
-  "version": "0.0.1",
-  "description": "Boilerplate Webpack 2, Babel, React, Redux, Babel-Node, Nodemon",
+  "name": "@likethemammal/open-source-react-component-example",
+  "version": "0.1.9",
+  "description": "Example open source react component",
+  "author": "Chris Dolphin",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likethemammal/open-source-react-component-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/likethemammal/open-source-react-component-example/issues"
+  },
+  "homepage": "https://github.com/likethemammal/open-source-react-component-example#readme",
+  "keywords": [
+    "react"
+  ],
+  "scripts": {
+    "test": "jest -u",
+    "cover": "jest --coverage -u",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --config webpack.dev.js"
+  },
+  "main": "bin/lib.js",
+  "files": [
+    "bin"
+  ],
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-primitives": "^0.4.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.6",
     "babel-core": "^6.24.1",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.2.0",
+    "coveralls": "^3.0.0",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-15.4": "^1.0.5",
+    "enzyme-to-json": "^3.2.2",
     "file-loader": "^0.11.1",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "jest": "^21.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "pixrem": "^4.0.1",
+    "postcss-loader": "^2.0.8",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "15.4.2",
+    "react-test-renderer": "^15.4.2",
+    "redux-devtools-extension": "^2.13.2",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.19.0",
+    "webpack": "3.9.1",
+    "webpack-dev-server": "^2.10.1",
+    "webpack-merge": "^4.1.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm i -g webpack webpack-dev-server@2 nodemon",
-    "dev": "babel-node webpack-dev-server",
-    "dev-on-server": "nodemon webpack-dev-server --exec babel-node"
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>test.config.js",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>src/__mocks__/file_mock.js",
+      "\\.(css|less)$": "<rootDir>src/__mocks__/css_mock.js"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
-  "author": "Chris Dolphin",
-  "license": "ISC"
+  "engines": {
+    "node": ">=8.4.0"
+  }
 }
