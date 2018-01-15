@@ -10,9 +10,9 @@ Easily copyable example of a react-redux-jest-webpack codebase, distributing a R
 
 Copy it and paste it
 
-## Usage
+## Development
 
-  `npm start`
+  `npm run dev`
 
 ## Tests
 
@@ -20,7 +20,7 @@ Copy it and paste it
 
 ## Publishing
 
-  `npm run dev` and then publish
+  `npm run build` and then publish
 
 ## Contributing
 
