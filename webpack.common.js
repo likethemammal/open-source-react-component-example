@@ -7,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const plugins = [
     new CopyWebpackPlugin([
-        { from: 'assets'},
         { from: 'example.html', to: 'index.html'}
     ])
 ]

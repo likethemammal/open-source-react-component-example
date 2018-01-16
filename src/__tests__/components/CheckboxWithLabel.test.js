@@ -1,8 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import toJSON from 'enzyme-to-json'
+import general_components from '@likethemammal/general-components'
 
+const shared = general_components.__tests__._shared.tests
 
 import CheckboxWithLabel from '../../components/CheckboxWithLabel';
 
@@ -12,9 +13,9 @@ describe('CheckboxWithLabel', () => {
         <CheckboxWithLabel labelOn="On" labelOff="Off" />
     )
 
-    test(`Snapshot should match`, () => {
-        expect(toJSON(component)).toMatchSnapshot()
-    })
+    shared.SNAPSHOTS_SHOULD_MATCH([
+        component
+    ])
 
     test('changes the text after click', () => {
 
