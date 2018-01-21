@@ -3,12 +3,8 @@ const pixrem = require('pixrem')
 
 const path = require('path')
 
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
 const plugins = [
-    new CopyWebpackPlugin([
-        { from: 'example.html', to: 'index.html'}
-    ])
+
 ]
 
 const css_loader = {
@@ -38,15 +34,13 @@ const config = {
 
     context: path.resolve(__dirname, './src'),
 
-    watch: true,
     entry: {
-        lib: './index.js',
-        example: './example.js'
+        index: './index.js',
     },
 
     output: {
         filename: '[name].js',
-        path:  path.resolve(__dirname, './bin'),
+        path:  path.resolve(__dirname, './lib'),
         publicPath: '/',
 
         library: 'OSSReactExample',
