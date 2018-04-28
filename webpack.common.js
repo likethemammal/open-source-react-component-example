@@ -24,6 +24,7 @@ const postcss_loader = {
                 autoprefixer('last 10 versions', 'ie 10'),
                 pixrem({
                     rootValue: 10,
+                    replace: true,
                 }),
             ]
         }
@@ -82,7 +83,7 @@ const config = {
             {
                 test: /\.(svg)$/,
                 use: ['raw-loader'],
-                exclude: /(node_modules)/,
+                // exclude: /(node_modules)/,
             }
         ]
 

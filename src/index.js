@@ -1,1 +1,1 @@
-module.exports = require('./components/Root').default
+export default from './components/index'
